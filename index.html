@@ -114,6 +114,7 @@ p{
      function login(){
         var username = document.getElementById("user").value;
         var password = document.getElementById("pass").value;
+    }
 
         if (username == "XoKitty" && password == "LaraJean"){
             alert("Access Granted! Welcome Back, " + username + "!");
@@ -123,6 +124,28 @@ p{
         
         else {
             alert("Access Denied! Incorrect username and/or password. Please try again.");
+        }
+
+        let attempt_counter = 0;
+
+
+        function authenticate(){
+            let username = document.getElementById("user").value;
+            let pwd = document.getElementById("pass").value;
+            let granted = "Welcome " + username + "!";
+            let denied = "Access denied. Account locked after 3 attempts!";
+        }
+
+
+        while (attempt_counter < 3) {
+        if (username === "XoKitty" && password === "LaraJean") {
+            alert(granted);
+            attempt_counter = 0; // reset attempts after successful login
+            document.getElementById("display").innerHTML = "";
+            window.location.href = "index.html";
+
+
+            break; // stop loop
         }
      }
 
