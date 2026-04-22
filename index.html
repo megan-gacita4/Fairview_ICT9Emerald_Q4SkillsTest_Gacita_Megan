@@ -51,6 +51,9 @@
     color:rgb(137, 182, 251);
     width: 100%;
 }
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
 
 
 
@@ -60,7 +63,7 @@
 
   <div class="container-fluid d-flex justify-content-center align-items-center">
 
-    <div class="p-4 mt-5 rounded-4 shadow-lg"
+    <div class="p-5 mt-5 shadow-lg login-box"
       style="width: 500px; background: rgba(195, 197, 204, 0.35); color:  rgb(137, 182, 251); border-radius: 20px;">
 
       <h2 class="text-center fw-bold">LogIn</h2>
@@ -80,6 +83,9 @@
   <input class="form-check-input" type="checkbox" id="stay">
   <label class="form-check-label">
     Stay logged in
+    <p style="font-size: 12px; color: rgb(137, 182, 251);">
+        You will stay logged in on this device.
+    </p>
   </label>
 </div>
 
@@ -90,6 +96,11 @@
 <button class="btn-customs w-100" onclick="cancelForm()">
   CANCEL
 </button>
+
+<br>
+<p style="text-decoration: underline; color: rgb(137, 182, 251);">
+    Forgot Username/Password?
+</p>
 
     </div>
   </div>
