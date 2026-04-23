@@ -89,7 +89,8 @@ p{
   </label>
 </div>
 
-<button class="btn-custom fw-bold w-100 mb-2" onclick="login()">
+<p id="display"></p>
+<button class="btn-custom fw-bold w-100 mb-2" id="loginBTN" onclick="login()">
   LogIn
 </button>
 
@@ -111,20 +112,7 @@ p{
      function message1(){
             document.getElementById('message').innerHTML = "FILL OUT ALL REQUIRED BOXES.";
         }
-     function login(){
-        var username = document.getElementById("user").value;
-        var password = document.getElementById("pass").value;
-
-        if (username == "XoKitty" && password == "LaraJean"){
-            alert("Access Granted! Welcome Back, " + username + "!");
-
-            location = "notebooks.html";
-        }
-        
-        else {
-            alert("Access Denied! Incorrect username and/or password. Please try again.");
-        }
-     }
+  
 
     function cancelForm() {
       alert("FORM CANCELLED! ANO BA, BAT MO CINANCEL!!");
@@ -133,7 +121,7 @@ p{
      let attempt_counter = 0;
 
 
-        function authenticate(){
+        function login(){
             let username = document.getElementById("user").value;
             let password = document.getElementById("pass").value;
             let granted = "Welcome " + username + "!";
@@ -145,7 +133,7 @@ p{
             alert(granted);
             attempt_counter = 0; // reset attempts after successful login
             document.getElementById("display").innerHTML = "";
-            window.location.href = "index.html";
+            window.location.href = "notebooks.html";
 
 
             break; // stop loop
@@ -154,8 +142,7 @@ p{
 
         else {
             attempt_counter++;
-            document.getElementById("display").innerHTML =
-                "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
+            document.getElementById("display").innerHTML = "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
             break; // stop loop for this click
         }
 
